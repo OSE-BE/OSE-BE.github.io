@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>  OSE - Pentesting Wi-Fi</title>
+    <link rel="stylesheet" href="style.css"> <!-- Assurez-vous que ce fichier CSS existe et est correctement lié -->
+    <style>
+        /* Styles spécifiques pour cette page si nécessaire */
+        .page-title {
+            color: #007bff; /* Bleu pour le titre */
+        }
+        .section-title {
+            color: #333;
+            margin-top: 25px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+        .image-placeholder {
+            width: 100%;
+            max-width: 600px; /* Ajustez selon la taille de vos images */
+            height: 300px; /* Hauteur indicative */
+            background-color: #e9ecef; /* Gris clair pour visualiser l'espace réservé */
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #6c757d; /* Texte gris */
+            font-style: italic;
+            text-align: center;
+            border: 2px dashed #ccc;
+        }
+        .image-placeholder::before {
+            content: "";
+        }
+        ul {
+            list-style-type: disc; /* Ou square, circle */
+            margin-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .example-box {
+            background-color: #f8f9fa;
+            border-left: 4px solid #007bff;
+            padding: 15px;
+            margin: 15px 0;
+            font-style: italic;
+        }
+        .risk-box {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+            color: #856404;
+        }
+        .legal-box {
+            background-color: #e2e3e5;
+            border-left: 4px solid #6c757d;
+            padding: 15px;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Navigation et Logo ici -->
+        <div class="site-title">OSE - Electronic Security Operation</div>
+        <nav>
+            <ul>
+                  <li><a href="index.html">Accueil</a></li>
+                 <li><a href="page7.html">Nos Services</a></li>
+                  <li><a href="page8.html">Méthodologie</a></li>
+                  <li><a href="page9.html">Rapports</a></li>
+                 <li><a href="page10.html">Contact</a></li>
+                 <!-- Ajoutez d'autres liens de navigation si nécessaire -->
+                <li><a href="page6.html" class="current-page">Pentesting Wi-Fi</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="page-title"> Domaine 3 &nbsp; PENTESTING Wi-Fi : Tests Externes</h1>
+
+        <h2 class="section-title">Qu’est-ce que le pentesting Wi-Fi - (version « tests externes »)</h2>
+
+        <!-- Placeholder pour l'image fig13.jpeg -->
+        <div class="image-placeholder">
+       <img src="images/fig13.jpg" alt="Illustration du Pentesting Wi-Fi"> 
+        </div>
+
+        <p>Le pentesting (test d’intrusion) est une simulation contrôlée d’attaque réalisée pour évaluer la sécurité d’un système. L’idée n’est pas de « pirater » pour nuire, mais de détecter et prouver les faiblesses avant que de vrais acteurs malveillants ne les exploitent.</p>
+
+        <h2 class="section-title">Que teste-t-on exactement ?</h2>
+        <p>Les tests externes Wi-Fi ciblent la résilience du réseau sans fil face à des perturbations et manipulations des trames radio (les paquets qui font fonctionner le Wi-Fi). Les actions typiques que l’on peut simuler sont par exemple :</p>
+
+        <h3 class="section-title">I) Déauthentification (deauth)</h3>
+        <p>La déauthentification est une technique qui force un appareil Wi-Fi (smartphone, caméra, PC…) à se déconnecter de son point d’accès. Quand elle est utilisée malicieusement, elle peut rendre un équipement inaccessible même si tout paraît normal côté box.</p>
+
+        <div class="example-box">
+            <strong>Exemple concret : la caméra Wi-Fi qui n’est plus accessible</strong><br>
+            Imaginez une caméra de surveillance connectée en Wi-Fi. Une attaque de déauth peut :
+            <ul>
+                <li>Couper l’accès à la caméra : l’image et le flux vidéo ne sont plus accessibles depuis l’application ou l’enregistreur.</li>
+                <li>Faire manquer des événements : vols, intrusions, incidents ne sont pas enregistrés ni vus en temps réel.</li>
+                <li>Empêcher la preuve : en cas d’incident, il peut manquer des séquences vidéo nécessaires pour les enquêtes ou l’assurance.</li>
+                <li>Créer une fausse impression de sécurité : les responsables pensent que tout fonctionne alors que l’observabilité est compromise.</li>
+                <li>Épuiser la batterie / ressources : la caméra peut tenter continuellement de se reconnecter, augmentant la consommation et le wear-and-tear.</li>
+                <li>Ouverture à d’autres attaques : pendant les désynchronisations, un attaquant peut tenter d’installer un point d’accès malveillant (rogue AP) ou exploiter le moment de reconnexion pour des attaques d’interception.</li>
+            </ul>
+        </div>
+
+        <div class="risk-box">
+            <strong>Conséquences pratiques et risques pour l’entreprise / le foyer</strong>
+            <ul>
+                <li>Perte de surveillance et réactions retardées (sécurité physique compromise).</li>
+                <li>Risque financier (vol, vandalisme non détecté) et administratif (problèmes avec assurances).</li>
+                <li>Atteinte à la réputation pour les lieux publics ou commerces.</li>
+                <li>Risque d’exfiltration ou d’escalade si l’attaque est une étape vers une intrusion plus large.</li>
+            </ul>
+        </div>
+
+        <!-- Lien de navigation -->
+        <div class="navigation-links">
+           <!--  <a href="page5.html" class="prev-page">&laquo; Précédent</a> -->
+            <!-- <a href="page7.html" class="next-page">Suivant &raquo;</a> -->
+			<!-- Bouton Précédent -->
+            <a href="page5.html" class="nav-button">&larr; Précédent</a>
+
+            <!-- Bouton Quitter (modifié) -->
+            <a href="index.html" class="nav-button quit">Quitter</a>
+
+            <!-- Bouton Suivant -->
+            <a href="page7.html" class="nav-button">Suivant &rarr;</a>
+        </div>
+
+    </main>
+
+    <footer>
+        <!-- Pied de page ici -->
+        <p>&copy; 2024 OSE - Electronic Security Operation. Tous droits réservés.</p>
+        <p>Contact : <a href="mailto:ose-be@mailfence.com">ose-be@mailfence.com</a></p>
+    </footer>
+</body>
+</html>

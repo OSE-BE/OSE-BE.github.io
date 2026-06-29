@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSE - Pentesting Wi-Fi (Suite)</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Styles spécifiques pour cette page si nécessaire */
+        .page-title {
+            color: #007bff;
+        }
+        .section-title {
+            color: #333;
+            margin-top: 25px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .example-box {
+            background-color: #f8f9fa;
+            border-left: 4px solid #007bff;
+            padding: 15px;
+            margin: 15px 0;
+            font-style: italic;
+        }
+        .risk-box {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+            color: #856404;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="site-title">OSE - Electronic Security Operation</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                 <li><a href="page7.html">Nos Services</a></li>
+                  <li><a href="page8.html">Méthodologie</a></li>
+                  <li><a href="page9.html">Rapports</a></li>
+                 <li><a href="page10.html">Contact</a></li>
+                 <!-- Ajoutez d'autres liens de navigation si nécessaire -->
+                <li><a href="page6.html" class="current-page">Pentesting Wi-Fi</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="page-title">PENTESTING Wi-Fi : Tests Externes (Suite)</h1>
+
+        <h3 class="section-title">II) Flood d’authentification</h3>
+        <p>Un flood d’authentification consiste à envoyer un grand nombre de tentatives d’accès envers une box ou le système qui gère les connexions (par exemple le service d’authentification de l’opérateur). L’objectif de l’attaquant est de saturer la capacité de la box ou du service pour empêcher les connexions normales.</p>
+
+        <div class="example-box">
+            <strong>Exemple concret : votre Bbox et vos services domestiques bloqués</strong><br>
+            Pour un foyer équipé d’une Bbox, un flood d’authentification peut provoquer :
+            <ul>
+                <li>Impossibilité de se connecter : vos téléphones, ordinateurs, tablettes ou appareils domotiques (caméras, alarmes, assistants vocaux) peuvent ne plus réussir à se connecter au Wi-Fi.</li>
+                <li>Interruption des services maison : la TV connectée, les enceintes, imprimantes ou systèmes de domotique peuvent cesser de fonctionner correctement.</li>
+                <li>Impact sur télétravail et communication : appels vidéo, visioconférence, accès au cloud ou à des ressources professionnelles peuvent être interrompus.</li>
+                <li>Épuisement des appareils : certains appareils peuvent tenter en boucle de se reconnecter, consommant batterie et ressources.</li>
+                <li>Stress et coût : perte de productivité, dépannage, éventuellement contact au support opérateur et interventions techniques.</li>
+            </ul>
+        </div>
+
+        <h3 class="section-title">III) Fuzzing de trames</h3>
+        <p>Le fuzzing de trames consiste à envoyer des paquets radio Wi-Fi anormaux, mal formés ou inattendus pour tester la robustesse d’un équipement (point d’accès, box, client). L’idée d’un test légitime est de vérifier si la box ou les appareils connectés gèrent correctement des entrées erronées ou malveillantes — sans toutefois provoquer de dommages. Mal utilisé, le fuzzing peut provoquer des plantages ou des comportements imprévus.</p>
+
+        <div class="example-box">
+            <strong>Exemple concret : impact sur une Bbox et les appareils du foyer</strong><br>
+            Sur une Bbox grand public, un fuzzing malveillant ou mal contrôlé peut entraîner :
+            <ul>
+                <li>Plantage ou redémarrage de la box : la box peut cesser de répondre ou redémarrer, coupant tous les services Internet.</li>
+                <li>Dysfonctionnements intermittents : instabilité du Wi-Fi, pertes de paquets, latences élevées affectant vidéos, jeux et visioconférences.</li>
+                <li>Comportements erratiques d’appareils connectés : caméras, box TV, ou objets domotiques peuvent se déconnecter ou fonctionner mal.</li>
+                <li>Sécurité affaiblie : si un firmware est vulnérable, le fuzzing peut être une porte d’entrée vers une compromission plus profonde.</li>
+                <li>Perte de services : accès aux applications métiers (si télétravail), streaming, contrôle à distance d’appareils, etc., peuvent être interrompus.</li>
+            </ul>
+        </div>
+
+        <!-- Lien de navigation -->
+        <div class="navigation-links">
+            <!--<a href="page6.html" class="prev-page">&laquo; Précédent</a> -->
+            <!--<a href="page8.html" class="next-page">Suivant &raquo;</a> -->
+			<!-- Bouton Précédent -->
+			 <a href="page6.html" class="nav-button">&larr; Précédent</a>
+
+            <!-- Bouton Quitter (modifié) -->
+            <a href="index.html" class="nav-button quit">Quitter</a>
+
+            <!-- Bouton Suivant -->
+            <a href="page8.html" class="nav-button">Suivant &rarr;</a>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 OSE - Electronic Security Operation. Tous droits réservés.</p>
+        <p>Contact : <a href="mailto:ose-be@mailfence.com">ose-be@mailfence.com</a></p>
+    </footer>
+</body>
+</html>

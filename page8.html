@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSE - Pentesting Wi-Fi (Suite)</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Styles spécifiques pour cette page si nécessaire */
+        .page-title {
+            color: #007bff;
+        }
+        .section-title {
+            color: #333;
+            margin-top: 25px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .example-box {
+            background-color: #f8f9fa;
+            border-left: 4px solid #007bff;
+            padding: 15px;
+            margin: 15px 0;
+            font-style: italic;
+        }
+        .risk-box {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+            color: #856404;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="site-title">OSE - Electronic Security Operation</div>
+        <nav>
+            <ul>
+                  <li><a href="index.html">Accueil</a></li>
+                 <li><a href="page7.html">Nos Services</a></li>
+                  <li><a href="page8.html">Méthodologie</a></li>
+                  <li><a href="page9.html">Rapports</a></li>
+                 <li><a href="page10.html">Contact</a></li>
+                 <!-- Ajoutez d'autres liens de navigation si nécessaire -->
+                <li><a href="page6.html" class="current-page">Pentesting Wi-Fi</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="page-title">PENTESTING Wi-Fi : Tests Externes (Suite)</h1>
+
+        <h3 class="section-title">IV) Beacon flood / beacon spamming</h3>
+        <p>Un beacon est une petite annonce radio que diffuse un point d’accès pour dire « je suis là » (SSID, capacités, canal…). Un beacon flood ou beacon spamming consiste à émettre un très grand nombre de ces annonces, souvent avec des SSID falsifiés ou changeants, pour polluer l’environnement radio et tromper les appareils.</p>
+
+        <div class="example-box">
+            <strong>Exemple concret : quel impact sur une Bbox et vos appareils</strong><br>
+            Sur une Bbox grand public et les appareils du foyer, un beacon flood peut provoquer :
+            <ul>
+                <li>Brouillage de la liste des réseaux : vos téléphones et ordinateurs affichent des dizaines ou centaines de faux réseaux, rendant la sélection et la connexion plus difficiles.</li>
+                <li>Confusion automatique : certains appareils peuvent tenter de se connecter automatiquement au mauvais réseau (si un SSID usurpé correspond), ce qui peut interrompre la connexion légitime.</li>
+                <li>Saturation visuelle et UX dégradée : pour un utilisateur, l’interface Wi-Fi devient illisible et source d’erreurs.</li>
+                <li>Effet sur les performances : la multiplication des beacons crée du « bruit » radio qui peut augmenter les latences et diminuer le débit perçu.</li>
+                <li>Risque d’usurpation (rogue SSID) : un attaquant peut présenter un SSID ressemblant au vôtre pour tromper un utilisateur et tenter une connexion non sécurisée.</li>
+            </ul>
+        </div>
+
+        <h2 class="section-title">Notes importantes</h2>
+        <p>Ces tests opèrent au-dessus du réseau local : on n’entre pas dans la configuration interne du routeur ni sur les équipements du LAN ; toutes les actions se passent sur la partie « radio » et montrent l’impact côté disponibilité et comportement des équipements Wi-Fi.</p>
+
+        <h2 class="section-title">Pourquoi réaliser ce type de test ?</h2>
+        <ul>
+            <li><strong>Mesurer la continuité de service :</strong> certains scénarios montrent qu’un AP ou un serveur d’authentification peut devenir indisponible sous certaines attaques, ce qui a un coût opérationnel réel.</li>
+            <li><strong>Détecter des failles de robustesse :</strong> firmware vulnérable, gestion incorrecte des trames ou absence de protections avancées.</li>
+            <li><strong>Prioriser les corrections :</strong> savoir si l’effort doit porter sur le firmware, les paramètres d’authentification, etc.</li>
+            <li><strong>Sensibiliser et préparer :</strong> fournir des preuves concrètes pour la direction et l’équipe technique afin d’agir rapidement.</li>
+        </ul>
+
+        <!-- Lien de navigation -->
+        <div class="navigation-links">
+            <!-- <a href="page7.html" class="prev-page">&laquo; Précédent</a> -->
+           <!-- <a href="page9.html" class="next-page">Suivant &raquo;</a> -->
+			<!-- Bouton Précédent -->
+			 <a href="page7.html" class="nav-button">&larr; Précédent</a>
+
+            <!-- Bouton Quitter (modifié) -->
+            <a href="index.html" class="nav-button quit">Quitter</a>
+
+            <!-- Bouton Suivant -->
+            <a href="page9.html" class="nav-button">Suivant &rarr;</a>
+			
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 OSE - Electronic Security Operation. Tous droits réservés.</p>
+        <p>Contact : <a href="mailto:ose-be@mailfence.com">ose-be@mailfence.com</a></p>
+    </footer>
+</body>
+</html>
